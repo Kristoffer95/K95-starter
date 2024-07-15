@@ -17,11 +17,13 @@ const EnvSchema = z.object({
   DATABASE_URL: z.string().url(),
   DB_MIGRATING: stringBoolean,
   DB_SEEDING: stringBoolean,
+  NEXT_PUBLIC_SUPABASE_URL: z.string(),
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string(),
 });
 
 export type EnvSchema = z.infer<typeof EnvSchema>;
 
-expand(config({ path: '.env.local'}));
+// expand(config({ path: '.env.local'}));
 
 try {
   EnvSchema.parse(process.env);

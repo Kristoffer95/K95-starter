@@ -34,3 +34,8 @@ db-studio:
 # # UI
 # shadcn-add:
 # 	npx shadcn-ui@latest add
+
+
+# Supabase
+supabase-generate-types:
+	npx supabase gen types --lang=typescript --local > src/types/supabase.ts
