@@ -4,27 +4,27 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
+import { type Tables } from "@/types/supabase";
 
-function TestComponent() {
+function PostSupabaseClient() {
   const router = useRouter();
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<Tables<"post">[] | []>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   const handleInserts = async (payload: unknown) => {
-    console.log("Change received!", payload);
+    // console.log("Change received!", payload);
     await fetchPosts();
-    router.refresh();
+    // router.refresh();
   };
 
   // Listen to inserts
-
   const fetchPosts = async () => {
     const { data, error } = await supabase.from("post").select("*");
 
     if (error) {
-      console.error("Error fetching posts:", error);
+      // console.error("Error fetching posts:", error);
     } else {
-      setPosts(data || []);
+      setPosts(data);
     }
     setLoading(false);
   };
@@ -52,10 +52,13 @@ function TestComponent() {
   // const { data: postFromSupabase } = await supabase.from("post").select();
 
   return (
-    <div>
-      {posts?.length}
-      <pre>from supabase: {JSON.stringify(posts, null, 2)}</pre>
+    <div className="border">
+      {posts?.length > 0 && (
+        <pre>
+          from supabase {posts?.length}: {JSON.stringify(posts, null, 2)}
+        </pre>
+      )}
     </div>
   );
 }
-export default TestComponent;
+export default PostSupabaseClient;

@@ -1,32 +1,11 @@
 import Link from "next/link";
 
-// import { LatestPost } from "@/app/_components/post";
-import { api, HydrateClient } from "@/trpc/server";
-import { createClient } from "@/utils/supabase/server";
-import TestComponent from "./_components/test-component";
+import { HydrateClient } from "@/trpc/server";
+import PostTrpcServer from "./_components/post-trpc-server";
+import PostSupabaseClient from "./_components/post-supabase-client";
+import PostTrpcClient from "./_components/post-trpc-client";
 
 export default async function Home() {
-  const supabase = createClient();
-
-  // const test = await api.post.test()
-
-  const allPosts = await api.post.getLatest();
-  // const { data: post } = await supabase.from("post");
-  // void api.post.getLatest.prefetch();
-
-  // const handleInserts = (payload: unknown) => {
-  //   console.log("Change received!", payload);
-  // };
-
-  // supabase
-  //   .channel("post-realtime")
-  //   .on(
-  //     "postgres_changes",
-  //     { event: "INSERT", schema: "public", table: "post" },
-  //     handleInserts,
-  //   )
-  //   .subscribe();
-
   return (
     <>
       <HydrateClient>
@@ -60,15 +39,12 @@ export default async function Home() {
               </Link>
             </div>
             <div className="flex">
-              <div className="flex flex-col items-center gap-2">
-                {allPosts.length}
-                <pre>from trpc: {JSON.stringify(allPosts, null, 2)}</pre>
-              </div>
+              <PostTrpcServer />
 
-              <TestComponent />
+              <PostTrpcClient />
+
+              {/* <PostSupabaseClient /> */}
             </div>
-
-            {/* <LatestPost /> */}
           </div>
         </main>
       </HydrateClient>
