@@ -1,29 +1,17 @@
-# Create T3 App
+# Template
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## Tech Stacks 💻
 
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
-
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+- [x] 🚀 [Next.js](https://nextjs.org) 14 — The React framework with hybrid static & server rendering, and App Router
+- [x] ⚡ [Supabase]() - Database handling and real-time data features for this project using PostgreSQL.
+- [x] 🔥 [TypeScript](https://www.typescriptlang.org) — JavaScript with type safety and enhanced developer experience.
+- [x] 💅 [Tailwind CSS](https://tailwindcss.com) — A utility-first CSS framework for rapid UI development
+- [x] 🗃 [Shadcn UI](https://ui.shadcn.com/) — A collection of beautiful and accessible components built with Radix UI and Tailwind CSS.
+- [x] 🌐 [tRPC](https://trpc.io) — A toolkit for building end-to-end typesafe APIs with Next.js and any database
+- [x] 📦 [Drizzle](https://orm.drizzle.team) — Type-safe, intuitive, and flexible ORM for PostgreSQL, MySQL, and SQLite using TypeScript.
+- [x] ♻️ [T3 Env](https://env.t3.gg/) — A library for managing type-safe environment variables in Next.js
+- [ ] 🔒 [NextAuth](https://next-auth.js.org/) — Authentication for Next.js with support for OAuth, email, and custom authentication.
+- [ ] 🛠 [BiomeJS](https://biomejs.dev/) — A tool for formatting, linting, and more in a fraction of a second.
+- [ ] 📊 [Google Analytics ](https://analytics.google.com/) — A web analytics service that tracks and reports website traffic.
+- [ ] 📨 [Email Service]() —
+- [ ] 📦 [Docker]() —
