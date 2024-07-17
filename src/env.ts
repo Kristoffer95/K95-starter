@@ -24,6 +24,8 @@ export const env = createEnv({
       .default("development"),
     DB_MIGRATING: stringBoolean,
     DB_SEEDING: stringBoolean,
+    DISCORD_CLIENT_ID: z.string(),
+    DISCORD_CLIENT_SECRET: z.string(),
   },
 
   /**

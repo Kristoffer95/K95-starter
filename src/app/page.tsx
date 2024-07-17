@@ -2,10 +2,12 @@ import Link from "next/link";
 
 import { HydrateClient } from "@/trpc/server";
 import PostTrpcServer from "./_components/post-trpc-server";
-import PostSupabaseClient from "./_components/post-supabase-client";
 import PostTrpcClient from "./_components/post-trpc-client";
+import { getServerAuthSession } from "@/server/auth";
 
 export default async function Home() {
+  const session = await getServerAuthSession();
+
   return (
     <>
       <HydrateClient>
@@ -38,12 +40,15 @@ export default async function Home() {
                 </div>
               </Link>
             </div>
+            <div>
+              {session?.user && (
+                <pre>{JSON.stringify(session.user, null, 2)}</pre>
+              )}
+            </div>
             <div className="flex">
               <PostTrpcServer />
 
               <PostTrpcClient />
-
-              {/* <PostSupabaseClient /> */}
             </div>
           </div>
         </main>
