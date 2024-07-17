@@ -31,9 +31,9 @@ db-studio:
 # dbdocs-build:
 # 	pnpm run dbdocs:build
 
-# # UI
-# shadcn-add:
-# 	npx shadcn-ui@latest add
+# UI
+shadcn-add:
+	npx shadcn-ui@latest add
 
 
 # Supabase
