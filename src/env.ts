@@ -23,7 +23,8 @@ const EnvSchema = z.object({
 
 export type EnvSchema = z.infer<typeof EnvSchema>;
 
-// expand(config({ path: '.env.local'}));
+// expand(config());
+// expand(config({ path: ".env.local" }));
 
 try {
   EnvSchema.parse(process.env);

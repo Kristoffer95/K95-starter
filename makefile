@@ -5,8 +5,8 @@ dev:
 # dev-https:
 # 	pnpm run dev:https
 
-# prod-start:
-# 	pnpm run build && pnpm run start
+prod-start:
+	pnpm run build && pnpm run start
 
 # DRIZZLE
 db-generate:
