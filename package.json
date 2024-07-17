@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
+    "db:generate": "dotenv -e .env.local -- drizzle-kit generate",
+    "db:migrate": "dotenv -e .env.local -- drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:drop": "drizzle-kit drop",
     "db:studio": "drizzle-kit studio",
@@ -42,6 +42,7 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
+    "dotenv-cli": "^7.4.2",
     "drizzle-kit": "^0.21.4",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.4",
