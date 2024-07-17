@@ -1,14 +1,15 @@
 // Example model schema from the Drizzle docs
 // https://orm.drizzle.team/docs/sql-schema-declaration
 
-import { sql } from "drizzle-orm";
+import { relations, sql } from "drizzle-orm";
 import {
   index,
-  pgTableCreator,
+  pgTable,
   serial,
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
+import user from "./next-auth/user";
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
@@ -16,22 +17,34 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-// export const createTable = pgTableCreator((name) => `trpc-drizzle-supabase-template_${name}`);
-export const createTable = pgTableCreator((name) => name);
 
-export const posts = createTable(
+const post = pgTable(
   "post",
   {
-    id: serial("id").primaryKey(),
+    id: varchar("id", { length: 255 })
+      .default(sql`gen_random_uuid()`)
+      .notNull()
+      .primaryKey()
+      .unique(),
+    userId: varchar("user_id").references(() => user.id),
     name: varchar("name", { length: 256 }),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
-      () => new Date()
+      () => new Date(),
     ),
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
-  })
+  }),
 );
+
+export const postRelations = relations(post, ({ one }) => ({
+  user: one(user, {
+    fields: [post.id],
+    references: [user.id],
+  }),
+}));
+
+export default post;

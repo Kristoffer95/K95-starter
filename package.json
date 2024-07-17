@@ -7,9 +7,9 @@
     "build": "next build",
     "db:generate": "dotenv -e .env.local -- drizzle-kit generate",
     "db:migrate": "dotenv -e .env.local -- drizzle-kit migrate",
-    "db:push": "drizzle-kit push",
-    "db:drop": "drizzle-kit drop",
-    "db:studio": "drizzle-kit studio",
+    "db:push": "dotenv -e .env.local -- drizzle-kit push",
+    "db:drop": "dotenv -e .env.local  -- drizzle-kit drop",
+    "db:studio": "dotenv -e .env.local --  drizzle-kit studio",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
