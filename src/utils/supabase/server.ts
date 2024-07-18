@@ -1,11 +1,11 @@
-import { createServerClient, type CookieOptions } from '@supabase/ssr'
-import { cookies } from 'next/headers'
-import type { Database } from '@/types/supabase'
+import { createServerClient, type CookieOptions } from '@supabase/ssr';
+import { cookies } from 'next/headers';
+import type { Database } from '@/types/supabase';
 
-import { env } from '@/env'
+import { env } from '@/env';
 
 export function createClient() {
-  const cookieStore = cookies()
+  const cookieStore = cookies();
 
   // Create a server's supabase client with newly configured cookie,
   // which could be used to maintain user's session
@@ -15,14 +15,14 @@ export function createClient() {
     {
       cookies: {
         getAll() {
-          return cookieStore.getAll()
+          return cookieStore.getAll();
         },
         setAll(cookiesToSet) {
           try {
             cookiesToSet.forEach(({ name, value, options }) =>
               // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
               cookieStore.set(name, value, options),
-            )
+            );
           } catch {
             // The `setAll` method was called from a Server Component.
             // This can be ignored if you have middleware refreshing
@@ -31,5 +31,5 @@ export function createClient() {
         },
       },
     },
-  )
+  );
 }

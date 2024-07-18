@@ -1,9 +1,15 @@
 // Example model schema from the Drizzle docs
 // https://orm.drizzle.team/docs/sql-schema-declaration
 
-import { relations, sql } from 'drizzle-orm'
-import { index, pgTable, serial, timestamp, varchar } from 'drizzle-orm/pg-core'
-import user from './next-auth/user'
+import { relations, sql } from 'drizzle-orm';
+import {
+  index,
+  pgTable,
+  serial,
+  timestamp,
+  varchar,
+} from 'drizzle-orm/pg-core';
+import user from './next-auth/user';
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
@@ -32,13 +38,13 @@ const post = pgTable(
   (example) => ({
     nameIndex: index('name_idx').on(example.name),
   }),
-)
+);
 
 export const postRelations = relations(post, ({ one }) => ({
   user: one(user, {
     fields: [post.id],
     references: [user.id],
   }),
-}))
+}));
 
-export default post
+export default post;

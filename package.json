@@ -12,6 +12,8 @@
     "db:studio": "dotenv -e .env.local --  drizzle-kit studio",
     "dev": "next dev",
     "lint": "next lint",
+    "biome:lint": "npx @biomejs/biome lint src/",
+    "biome:format": "npx @biomejs/biome format --write src/",
     "start": "next start"
   },
   "dependencies": {

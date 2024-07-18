@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import { useState } from 'react';
 
-import { api } from '@/trpc/react'
+import { api } from '@/trpc/react';
 
 export function LatestPost() {
   // const [latestPost] = api.post.getLatest.useSuspenseQuery();
@@ -49,5 +49,5 @@ export function LatestPost() {
       </form>
     </div> */}
     </>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { pgTable, primaryKey, timestamp, varchar } from 'drizzle-orm/pg-core'
+import { pgTable, primaryKey, timestamp, varchar } from 'drizzle-orm/pg-core';
 
 const verificationToken = pgTable(
   'verificationToken',
@@ -13,6 +13,6 @@ const verificationToken = pgTable(
   (vt) => ({
     compoundKey: primaryKey({ columns: [vt.identifier, vt.token] }),
   }),
-)
+);
 
-export default verificationToken
+export default verificationToken;

@@ -5,10 +5,10 @@ import {
   primaryKey,
   text,
   varchar,
-} from 'drizzle-orm/pg-core'
-import user from './user'
-import type { AdapterAccount } from 'next-auth/adapters'
-import { relations } from 'drizzle-orm'
+} from 'drizzle-orm/pg-core';
+import user from './user';
+import type { AdapterAccount } from 'next-auth/adapters';
+import { relations } from 'drizzle-orm';
 
 const account = pgTable(
   'account',
@@ -35,10 +35,10 @@ const account = pgTable(
     }),
     userIdIdx: index('account_userId_idx').on(account.userId),
   }),
-)
+);
 
 export const accountsRelations = relations(account, ({ one }) => ({
   user: one(user, { fields: [account.userId], references: [user.id] }),
-}))
+}));
 
-export default account
+export default account;

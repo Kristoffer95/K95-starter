@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-import { HydrateClient } from '@/trpc/server';
-import PostTrpcServer from './_components/post-trpc-server';
-import PostTrpcClient from './_components/post-trpc-client';
-import { getServerAuthSession } from '@/server/auth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import LoginDiscord from './_components/shared/login-discord';
 import { Button } from '@/components/ui/button';
+import { getServerAuthSession } from '@/server/auth';
+import { HydrateClient } from '@/trpc/server';
+import PostTrpcClient from './_components/post-trpc-client';
+import PostTrpcServer from './_components/post-trpc-server';
+import LoginDiscord from './_components/shared/login-discord';
 
 export default async function Home() {
   const session = await getServerAuthSession();
