@@ -11,7 +11,7 @@
 - [x] 📦 [Drizzle](https://orm.drizzle.team) — Type-safe, intuitive, and flexible ORM for PostgreSQL, MySQL, and SQLite using TypeScript.
 - [x] ♻️ [T3 Env](https://env.t3.gg/) — A library for managing type-safe environment variables in Next.js
 - [x] 🔒 [NextAuth](https://next-auth.js.org/) — Authentication for Next.js with support for OAuth, email, and custom authentication.
-- [ ] 🛠 [BiomeJS](https://biomejs.dev/) — A tool for formatting, linting, and more in a fraction of a second.
+- [x] 🛠 [BiomeJS](https://biomejs.dev/) — A tool for formatting, linting, and more in a fraction of a second.
 - [ ] 📊 [Google Analytics ](https://analytics.google.com/) — A web analytics service that tracks and reports website traffic.
 - [ ] 📨 [Email Service]() —
 - [ ] 📦 [Docker]() —
