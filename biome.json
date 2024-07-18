@@ -17,6 +17,16 @@
     "enabled": true,
     "rules": {
       "recommended": false,
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "error",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw"]
+          }
+        }
+      },
       "complexity": {
         "noBannedTypes": "error",
         "noUselessThisAlias": "error",
