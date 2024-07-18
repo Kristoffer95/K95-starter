@@ -45,6 +45,7 @@
     "zod": "^3.23.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
@@ -53,7 +54,7 @@
     "@typescript-eslint/parser": "^7.1.1",
     "dotenv-cli": "^7.4.2",
     "drizzle-kit": "^0.21.4",
-    "eslint": "^8.57.0",
+    "eslint": "^9.7.0",
     "eslint-config-next": "^14.2.4",
     "eslint-plugin-drizzle": "^0.2.3",
     "i": "^0.3.7",

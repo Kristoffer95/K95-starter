@@ -15,3 +15,5 @@
 - [ ] 📊 [Google Analytics ](https://analytics.google.com/) — A web analytics service that tracks and reports website traffic.
 - [ ] 📨 [Email Service]() —
 - [ ] 📦 [Docker]() —
+- [ ] 🧪 [Playwrite]() —
+- [ ] 👨‍💻 [Storybook]() —

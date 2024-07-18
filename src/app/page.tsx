@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { HydrateClient } from "@/trpc/server";
-import PostTrpcServer from "./_components/post-trpc-server";
-import PostTrpcClient from "./_components/post-trpc-client";
-import { getServerAuthSession } from "@/server/auth";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import LoginDiscord from "./_components/shared/login-discord";
-import { Button } from "@/components/ui/button";
+import { HydrateClient } from '@/trpc/server';
+import PostTrpcServer from './_components/post-trpc-server';
+import PostTrpcClient from './_components/post-trpc-client';
+import { getServerAuthSession } from '@/server/auth';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import LoginDiscord from './_components/shared/login-discord';
+import { Button } from '@/components/ui/button';
 
 export default async function Home() {
   const session = await getServerAuthSession();
@@ -16,7 +16,7 @@ export default async function Home() {
       <HydrateClient>
         <main className="flex min-h-screen flex-col items-center justify-center">
           <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-            <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
+            <h1 className="font-extrabold text-5xl tracking-tight sm:text-[5rem]">
               Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
             </h1>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
@@ -25,7 +25,7 @@ export default async function Home() {
                 href="https://create.t3.gg/en/usage/first-steps"
                 target="_blank"
               >
-                <h3 className="text-2xl font-bold">First Steps →</h3>
+                <h3 className="font-bold text-2xl ">First Steps →</h3>
                 <div className="text-lg">
                   Just the basics - Everything you need to know to set up your
                   database and authentication.
@@ -36,7 +36,7 @@ export default async function Home() {
                 href="https://create.t3.gg/en/introduction"
                 target="_blank"
               >
-                <h3 className="text-2xl font-bold">Documentation →</h3>
+                <h3 className="font-bold text-2xl">Documentation →</h3>
                 <div className="text-lg">
                   Learn more about Create T3 App, the libraries it uses, and how
                   to deploy it.
@@ -54,7 +54,7 @@ export default async function Home() {
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
               )}
-              <Button variant={"outline"} className="bg-black/0">
+              <Button variant={'outline'} className="bg-black/0">
                 <Link href="/api/auth/signout">Logout </Link>
               </Button>
             </div>

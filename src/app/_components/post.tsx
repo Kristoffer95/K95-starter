@@ -1,8 +1,8 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
 
-import { api } from "@/trpc/react";
+import { api } from '@/trpc/react'
 
 export function LatestPost() {
   // const [latestPost] = api.post.getLatest.useSuspenseQuery();
@@ -18,8 +18,8 @@ export function LatestPost() {
 
   return (
     <>
-    <h1>test</h1>
-    {/* <div className="w-full max-w-xs">
+      <h1>test</h1>
+      {/* <div className="w-full max-w-xs">
       {latestPost ? (
         <p className="truncate">Your most recent post: {latestPost.name}</p>
       ) : (
@@ -49,5 +49,5 @@ export function LatestPost() {
       </form>
     </div> */}
     </>
-  );
+  )
 }

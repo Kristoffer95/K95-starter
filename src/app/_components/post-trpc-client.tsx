@@ -1,37 +1,37 @@
-"use client";
+'use client'
 
-import { api } from "@/trpc/react";
-import { useEffect, useState } from "react";
-import { supabase } from "@/utils/supabase/client";
-import { useRouter } from "next/navigation";
+import { api } from '@/trpc/react'
+import { useEffect, useState } from 'react'
+import { supabase } from '@/utils/supabase/client'
+import { useRouter } from 'next/navigation'
 
 function PostTrpcClient() {
-  const trpcUtils = api.useUtils();
+  const trpcUtils = api.useUtils()
 
-  const router = useRouter();
-  const { data: posts } = api.post.getLatest.useQuery();
+  const router = useRouter()
+  const { data: posts } = api.post.getLatest.useQuery()
 
   const getLatestPost = async () => {
-    await trpcUtils.post.getLatest.invalidate();
-    router.refresh();
-  };
+    await trpcUtils.post.getLatest.invalidate()
+    router.refresh()
+  }
 
   useEffect(() => {
     const subscription = supabase
-      .channel("post-realtime")
+      .channel('post-realtime')
       .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "post" },
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'post' },
         () => {
-          void getLatestPost();
+          void getLatestPost()
         },
       )
-      .subscribe();
+      .subscribe()
 
     return () => {
-      void subscription.unsubscribe();
-    };
-  }, []);
+      void subscription.unsubscribe()
+    }
+  }, [])
 
   return (
     <div className="w-[400px] border">
@@ -41,6 +41,6 @@ function PostTrpcClient() {
         </pre>
       )}
     </div>
-  );
+  )
 }
-export default PostTrpcClient;
+export default PostTrpcClient

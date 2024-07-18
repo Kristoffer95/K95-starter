@@ -2,15 +2,15 @@
  * Reference: https://env.t3.gg/docs/nextjs
  */
 
-import { createEnv } from "@t3-oss/env-nextjs";
-import { z } from "zod";
+import { createEnv } from '@t3-oss/env-nextjs'
+import { z } from 'zod'
 
 const stringBoolean = z.coerce
   .string()
   .transform((val) => {
-    return val === "true";
+    return val === 'true'
   })
-  .default("false");
+  .default('false')
 
 export const env = createEnv({
   /**
@@ -20,8 +20,8 @@ export const env = createEnv({
   server: {
     DATABASE_URL: z.string().url(),
     NODE_ENV: z
-      .enum(["development", "test", "production"])
-      .default("development"),
+      .enum(['development', 'test', 'production'])
+      .default('development'),
     DB_MIGRATING: stringBoolean,
     DB_SEEDING: stringBoolean,
     DISCORD_CLIENT_ID: z.string(),
@@ -57,7 +57,7 @@ export const env = createEnv({
    * `SOME_VAR=''` will throw an error.
    */
   emptyStringAsUndefined: true,
-});
+})
 
 // import { config } from "dotenv";
 // import { expand } from "dotenv-expand";
