@@ -2,7 +2,7 @@
 
 ## Tech Stacks 💻
 
-- [x] 🚀 [Next.js](https://nextjs.org) 14 — The React framework with hybrid static & server rendering, and App Router
+- [x] 🚀 [Next.js 14](https://nextjs.org) — The React framework with hybrid static & server rendering, and App Router
 - [x] ⚡ [Supabase]() - Database handling and real-time data features for this project using PostgreSQL.
 - [x] 🔥 [TypeScript](https://www.typescriptlang.org) — JavaScript with type safety and enhanced developer experience.
 - [x] 💅 [Tailwind CSS](https://tailwindcss.com) — A utility-first CSS framework for rapid UI development
