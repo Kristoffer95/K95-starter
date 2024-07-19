@@ -17,3 +17,18 @@
 - [ ] 📦 [Docker]() —
 - [ ] 🧪 [Playwrite]() —
 - [ ] 👨‍💻 [Storybook]() —
+
+## Usage Details
+ - **Supabase:** This template uses Supabase to handle the PostgreSQL database and real-time data features. Supabase offers an easy-to-use interface and powerful features for managing databases and real-time subscriptions.
+
+ - **Drizzle:** Drizzle is used for database migrations, providing a type-safe, intuitive, and flexible ORM that simplifies interactions with PostgreSQL, MySQL, and SQLite databases.
+
+ - **Next.js:** Next.js powers the core of the application, offering hybrid static & server rendering and routing capabilities.
+
+ - **tRPC:** tRPC enables building typesafe APIs, ensuring end-to-end type safety across the full stack.
+
+ - **NextAuth:** NextAuth is implemented to manage authentication, supporting OAuth, email, and custom authentication methods.
+
+ - **T3 Env:** T3 Env is used to manage type-safe environment variables, ensuring consistency and security in configuration.
+
+ - **BiomeJS:** BiomeJS is utilized for formatting, linting, and other code quality tasks, enhancing development speed and code maintainability.
