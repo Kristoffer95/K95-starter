@@ -1,7 +1,11 @@
 import Link from 'next/link';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@/app/_components/ui/avatar';
+import { Button } from '@/app/_components/ui/button';
 import { getServerAuthSession } from '@/server/auth';
 import { HydrateClient } from '@/trpc/server';
 import PostTrpcClient from './_components/post-trpc-client';
