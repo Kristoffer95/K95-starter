@@ -34,7 +34,7 @@ function PostTrpcClient() {
   }, []);
 
   return (
-    <div className="w-[400px] border">
+    <div className="min-w-[400px] border">
       {posts && posts?.length > 0 && (
         <pre>
           from trpc client {posts?.length}: {JSON.stringify(posts, null, 2)}
