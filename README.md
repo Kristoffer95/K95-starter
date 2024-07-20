@@ -18,7 +18,7 @@
 - [ ] 🧪 [Playwrite]() —
 - [ ] 👨‍💻 [Storybook]() —
 
-## Usage Details
+<!-- ## Usage Details
  - **Supabase:** This template uses Supabase to handle the PostgreSQL database and real-time data features. Supabase offers an easy-to-use interface and powerful features for managing databases and real-time subscriptions.
 
  - **Drizzle:** Drizzle is used for database migrations, providing a type-safe, intuitive, and flexible ORM that simplifies interactions with PostgreSQL, MySQL, and SQLite databases.
@@ -31,4 +31,4 @@
 
  - **T3 Env:** T3 Env is used to manage type-safe environment variables, ensuring consistency and security in configuration.
 
- - **BiomeJS:** BiomeJS is utilized for formatting, linting, and other code quality tasks, enhancing development speed and code maintainability.
+ - **BiomeJS:** BiomeJS is utilized for formatting, linting, and other code quality tasks, enhancing development speed and code maintainability. -->
