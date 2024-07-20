@@ -28,7 +28,7 @@ npx @k95/starter project_name
   - **Realtime** -
   - **Magic Link** -
   - **End-to-end type safety** -
-  - 
+  - **Seeding** -
 <!-- ## Usage Details
  - **Supabase:** This template uses Supabase to handle the PostgreSQL database and real-time data features. Supabase offers an easy-to-use interface and powerful features for managing databases and real-time subscriptions.
 
