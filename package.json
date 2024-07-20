@@ -1,8 +1,8 @@
 {
-  "name": "trpc-drizzle-supabase-template",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@k95/starter",
+  "version": "0.1.11",
   "type": "module",
+  "bin": "./bin/cli.js",
   "scripts": {
     "build": "next build",
     "db:generate": "drizzle-kit generate",
