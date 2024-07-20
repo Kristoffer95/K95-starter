@@ -1,8 +1,10 @@
 # Template
 
 ## Installation
-> npx @k95/starter [project_name]
 
+```bash
+npx @k95/starter project_name
+```
 ## Tech Stacks 💻
 
 - [x] 🚀 [Next.js 14](https://nextjs.org) — The React framework with hybrid static & server rendering, and App Router
@@ -16,13 +18,17 @@
 - [x] 🔒 [NextAuth](https://next-auth.js.org/) — Authentication for Next.js with support for OAuth, email, and custom authentication.
 - [x] 🛠 [BiomeJS](https://biomejs.dev/) — A tool for formatting, linting, and more in a fraction of a second.
 - [ ] 📊 [Google Analytics ](https://analytics.google.com/) — A web analytics service that tracks and reports website traffic.
-- [ ] 📨 [Email Service]() —
+- [ ] 📨 [Resend]() —
 - [ ] 📦 [Docker]() —
-- [ ] 🧪 [Playwrite]() —
+- [ ] 🧪 [Playwright]() —
 - [ ] 👨‍💻 [Storybook]() —
 
 ## Features
 
+  - **Realtime** -
+  - **Magic Link** -
+  - **End-to-end type safety** -
+  - 
 <!-- ## Usage Details
  - **Supabase:** This template uses Supabase to handle the PostgreSQL database and real-time data features. Supabase offers an easy-to-use interface and powerful features for managing databases and real-time subscriptions.
 
