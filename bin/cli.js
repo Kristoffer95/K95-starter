@@ -32,3 +32,7 @@ console.log(
   `create a .env file and copy and fill the variables from .env.example`,
 );
 console.log(`then do \`make dev\``);
+
+console.log(`\n\n`);
+
+console.log('NOTE: you can remove the `bin` folder as it\'s not used and in the package.json you can replace the bin to `"private": true`');
