@@ -1,5 +1,8 @@
 # Template
 
+## Installation
+> npx @k95/starter [project_name]
+
 ## Tech Stacks 💻
 
 - [x] 🚀 [Next.js 14](https://nextjs.org) — The React framework with hybrid static & server rendering, and App Router
@@ -17,6 +20,8 @@
 - [ ] 📦 [Docker]() —
 - [ ] 🧪 [Playwrite]() —
 - [ ] 👨‍💻 [Storybook]() —
+
+## Features
 
 <!-- ## Usage Details
  - **Supabase:** This template uses Supabase to handle the PostgreSQL database and real-time data features. Supabase offers an easy-to-use interface and powerful features for managing databases and real-time subscriptions.

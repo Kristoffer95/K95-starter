@@ -1,6 +1,6 @@
 {
   "name": "@k95/starter",
-  "version": "0.1.11",
+  "version": "0.1.2",
   "type": "module",
   "bin": "./bin/cli.js",
   "scripts": {
