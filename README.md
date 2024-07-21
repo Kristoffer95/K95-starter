@@ -25,10 +25,10 @@ npx @k95/starter project_name
 
 ## Features
 
-  - **Realtime** -
-  - **Magic Link** -
-  - **End-to-end type safety** -
-  - **Seeding** -
+  - **Realtime** - built-in feature from supabase
+  - **Magic Link** - to be added
+  - **End-to-end type safety** - built-in feature from tRPC
+  - **Seeding** - Seeding files located at src/server/db/seeds/
 <!-- ## Usage Details
  - **Supabase:** This template uses Supabase to handle the PostgreSQL database and real-time data features. Supabase offers an easy-to-use interface and powerful features for managing databases and real-time subscriptions.
 
