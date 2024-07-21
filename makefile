@@ -1,35 +1,35 @@
 # DEV
 dev:
-	pnpm run dev
+	npm run dev
 
 # dev-https:
-# 	pnpm run dev:https
+# 	npm run dev:https
 
 prod-start:
-	pnpm run build && pnpm run start
+	npm run build && npm run start
 
 # DRIZZLE
 db-generate:
-	pnpm run db:generate
+	npm run db:generate
 
 db-migrate:
-	pnpm run db:migrate
+	npm run db:migrate
 
 db-push:
-	pnpm run db:push
+	npm run db:push
 
 db-drop:
-	pnpm run db:drop
+	npm run db:drop
 
 db-studio:
-	pnpm run db:studio
+	npm run db:studio
 
-# db-seed:
-# 	pnpm run db:seed
+db-seed:
+	npm run db:seed
 
 # # DBDOCS
 # dbdocs-build:
-# 	pnpm run dbdocs:build
+# 	npm run dbdocs:build
 
 # UI
 shadcn-add:

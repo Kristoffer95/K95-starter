@@ -1,8 +1,8 @@
-import { createServerClient, type CookieOptions } from '@supabase/ssr';
-import { cookies } from 'next/headers';
 import type { Database } from '@/types/supabase';
+import { type CookieOptions, createServerClient } from '@supabase/ssr';
+import { cookies } from 'next/headers';
 
-import { env } from '@/env';
+import { envClient } from '@/env/client';
 
 export function createClient() {
   const cookieStore = cookies();
@@ -10,8 +10,8 @@ export function createClient() {
   // Create a server's supabase client with newly configured cookie,
   // which could be used to maintain user's session
   return createServerClient<Database>(
-    env.NEXT_PUBLIC_SUPABASE_URL,
-    env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    envClient.NEXT_PUBLIC_SUPABASE_URL,
+    envClient.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
         getAll() {

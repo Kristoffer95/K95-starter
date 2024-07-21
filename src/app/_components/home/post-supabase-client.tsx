@@ -3,7 +3,6 @@
 import type { Tables } from '@/types/supabase';
 import { supabase } from '@/utils/supabase/client';
 import { useRouter } from 'next/navigation';
-// import { createClient } from "@/utils/supabase/client";
 import { useEffect, useState } from 'react';
 
 function PostSupabaseClient() {
@@ -12,9 +11,8 @@ function PostSupabaseClient() {
   const [loading, setLoading] = useState<boolean>(true);
 
   const handleInserts = async (payload: unknown) => {
-    // console.log("Change received!", payload);
     await fetchPosts();
-    // router.refresh();
+    router.refresh();
   };
 
   // Listen to inserts
@@ -22,7 +20,7 @@ function PostSupabaseClient() {
     const { data, error } = await supabase.from('post').select('*');
 
     if (error) {
-      // console.error("Error fetching posts:", error);
+      console.error('Error fetching posts:', error);
     } else {
       setPosts(data);
     }
@@ -47,9 +45,6 @@ function PostSupabaseClient() {
       void subscription.unsubscribe();
     };
   }, []);
-
-  // const { data } = await supabase.from("post").select();
-  // const { data: postFromSupabase } = await supabase.from("post").select();
 
   return (
     <div className="border">

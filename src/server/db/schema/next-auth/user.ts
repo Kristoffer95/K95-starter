@@ -1,8 +1,6 @@
 import { relations, sql } from 'drizzle-orm';
 import { pgTable, timestamp, varchar } from 'drizzle-orm/pg-core';
 import account from './account';
-// import cart from "../cart";
-// import storeUsers from "../store-users";
 
 const user = pgTable('user', {
   id: varchar('id', { length: 255 })
@@ -21,8 +19,6 @@ const user = pgTable('user', {
 
 export const usersRelations = relations(user, ({ many }) => ({
   accounts: many(account),
-  // carts: many(cart),
-  // storeUsers: many(storeUsers)
 }));
 
 export default user;
