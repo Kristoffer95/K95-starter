@@ -1,6 +1,6 @@
 {
   "name": "@k95/starter",
-  "version": "0.1.32",
+  "version": "0.1.33",
   "type": "module",
   "bin": "./bin/cli.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "@trpc/client": "^11.0.0-rc.446",
     "@trpc/react-query": "^11.0.0-rc.446",
     "@trpc/server": "^11.0.0-rc.446",
+    "chalk": "^5.3.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
@@ -56,7 +57,6 @@
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "chalk": "^5.3.0",
     "cross-env": "^7.0.3",
     "dotenv-cli": "^7.4.2",
     "drizzle-kit": "^0.21.4",
